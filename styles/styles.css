@@ -1680,7 +1680,7 @@ body {
   color: #ffffff;
   background-color: #ee3643;
   border-radius: 2px;
-  padding: 14px 44px;
+  padding: 14px 39px;
   display: flex;
   width: 195px;
 }
@@ -1759,7 +1759,7 @@ body {
 .footer-first-column {
   display: flex;
   flex-direction: column;
-  width: 322px;
+  width: 345px;
 }
 
 .footer-second-column {
