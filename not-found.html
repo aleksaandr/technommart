@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="Интернет-магазин Техномарт. Огромный выбор строительных материалов и инструментов для ремонта">
+    <title>HTML Academy: Техномарт</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+  </head>
+
+  <body>
+    <!-- Для показа состояния ошибки у input добавьте к input класс invalid -->
+    <div class="page-wrapper">
+      <header class="page-header">
+        <div class="header-first-floor">
+          <span class="online-shop">Интернет-магазин строительных материалов и инструментов для ремонта</span>
+          <address class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+          <a class="phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+        </div>
+        <div class="header-second-floor">
+          <a class="logo" href="index.html">
+            <img src="/images/content/logo.png" width="220" height="50" alt="Логотип Техномарта.">
+          </a>
+          <label class="search-label">
+            <input class="search-input" type="search" placeholder="Поиск по сайту">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M8 16a8 8 0 1 1 6.32-3.094l5.387 5.387-1.414 1.414-5.387-5.387A7.965 7.965 0 0 1 8 16Zm6-8A6 6 0 1 1 2 8a6 6 0 0 1 12 0Z" />
+            </svg>
+            <span class="search-word">Поиск:</span>
+          </label>
+          <!-- Для показа авторизованного пользователя нужно переставить класс log-in-window-container-shown ко второму log-in-window-container -->
+          <div class="log-in-window-container log-in-window-container-shown">
+            <button class="log-in-button" type="button">
+              Войти
+            </button>
+            <div class="log-in-window">
+              <h3 class="log-in-heading">Личный кабинет</h3>
+              <button class="log-in-button-exit" type="button">
+                <span class="visually-hidden">Выйти из личного кабинета.</span>
+              </button>
+              <form class="log-in-form" action="https://echo.htmlacademy.ru/" method="post">
+                <label class="log-in-label log-in-label-enter">
+                  <span class="visually-hidden">Поле для ввода логина.</span>
+                  <input class="log-in-input" type="text" name="login" placeholder="Логин" required>
+                  <span class="invalid-text invalid-text-log-in">Длина логина должна быть не менее 8 символов!</span>
+                </label>
+                <label class="log-in-label log-in-label-password">
+                  <span class="visually-hidden">Поле для ввода пароля.</span>
+                  <input class="log-in-input" type="password" name="password" placeholder="Пароль" required>
+                  <span class="invalid-text invalid-text-log-in">Длина пароля должна быть не менее 8 символов!</span>
+                </label>
+                <div class="memory-container">
+                  <label class="memory-label filter-makers-label">
+                    <input class="filter-makers-checkbox" type="checkbox" name="remember-me" value="yes">
+                    <span class="filter-makers-custom-checkbox" tabindex="0"></span>
+                    Запомнить меня
+                  </label>
+                  <a class="forgot-password" href="#">Забыл пароль</a>
+                </div>
+                <div class="log-in-links-container">
+                  <button class="log-in-enter" type="submit">Войти</button>
+                  <a class="log-in-registration" href="#">Регистрация</a>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="log-in-window-container log-in-window-container-second">
+            <a class="personal-account-link" href="#">Равшан Джамшутович</a>
+            <a class="log-in-button log-in-button-authorized" href="#">
+              <span class="visually-hidden">Выйти на страницу деавторизации.</span>
+            </a>
+            <div class="log-in-window log-in-window-authorized">
+              <h3 class="log-in-heading log-in-heading-authorized">Здравствуйте, <br>
+                Равшан Джамшутович</h3>
+              <button class="log-in-button-exit" type="button">
+                <span class="visually-hidden">Выйти из личного кабинета.</span>
+              </button>
+              <a class="log-in-link log-in-link-orders" href="#">Мои заказы</a>
+              <a class="log-in-link log-in-link-account" href="#">Личный кабинет</a>
+              <a class="log-in-exit-link" href="#">Выйти</a>
+            </div>
+          </div>
+        </div>
+        <nav class="navigation">
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">
+                Главная
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">
+                Компания
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">
+                Каталог
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">
+                Новости
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">
+                Спецпредложения
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">
+                Доставка
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">
+                Контакты
+              </a>
+            </li>
+          </ul>
+          <ul class="user-list">
+            <li class="user-item user-item-bookmarks">
+              <a class="header-icon-link bookmarks-link" href="#">
+                <span class="visually-hidden">Перейти на страницу с Вашими закладками.</span>
+              </a>
+            </li>
+            <li class="user-item user-item-cart">
+              <a class="header-icon-link cart-link" href="#">
+                <span class="visually-hidden">Перейти в корзину.</span>
+              </a>
+            </li>
+            <li class="user-item">
+              <a class="order-link" href="#">Оформить заказ</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="page-main">
+        <p class="mistake">404</p>
+        <p class="mistake-description">Ошибка! <br> К сожалению, запрашиваемая <br> Вами страница не найдена...</p>
+        <a class="to-index-link" href="index.html">Вернуться на главную...</a>
+      </main>
+      <footer class="page-footer">
+        <div class="footer-first-floor">
+          <div class="footer-first-column">
+            <a class="logo footer-logo" href="index.html">
+              <img src="/images/content/logo.png" width="220" height="56" alt="Логотип Техномарта.">
+            </a>
+            <address class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+            <a class="footer-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+            <ul class="social-list">
+              <li class="social-item">
+                <a class="social-link social-link-pin" href="#" target="_blank">
+                  <span class="visually-hidden">Мы в Pinterest.</span>
+                  <svg class="social-icon" width="23" height="23" viewBox="0 0 23 23" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11.04 0C4.948 0 0 4.948 0 11.04c0 6.091 4.948 11.04 11.04 11.04 6.091 0 11.04-4.948 11.04-11.04C22.08 4.948 17.132 0 11.04 0Zm0 .96c5.573 0 10.08 4.507 10.08 10.08s-4.507 10.08-10.08 10.08a10.1 10.1 0 0 1-2.93-.433c.413-.69.946-1.677 1.158-2.492l.643-2.453c.336.641 1.319 1.185 2.365 1.185 3.112 0 5.356-2.863 5.356-6.42 0-3.41-2.783-5.96-6.363-5.96-4.455 0-6.819 2.99-6.819 6.245 0 1.513.805 3.398 2.095 3.998.195.09.3.052.345-.138.034-.143.208-.844.287-1.17a.31.31 0 0 0-.072-.296c-.426-.518-.768-1.468-.768-2.355 0-2.276 1.723-4.48 4.659-4.48 2.535 0 4.31 1.729 4.31 4.2 0 2.791-1.409 4.726-3.243 4.726-1.013 0-1.772-.838-1.528-1.866.291-1.227.855-2.55.855-3.436 0-.792-.426-1.453-1.306-1.453-1.036 0-1.868 1.07-1.868 2.506 0 .913.31 1.532.31 1.532s-1.023 4.325-1.21 5.13c-.188.804-.138 1.887-.06 2.694A10.073 10.073 0 0 1 .96 11.04C.96 5.467 5.467.96 11.04.96Z"
+                      fill="#FEFAFA" />
+                  </svg>
+                </a>
+              </li>
+              <li class="social-item">
+                <a class="social-link social-link-vk" href="#" target="_blank">
+                  <span class="visually-hidden">Мы во Вконтакте.</span>
+                  <svg class="social-icon social-icon-vk" width="18" height="10" viewBox="0 0 18 10" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.76 7.675c.638-.206 1.454 1.36 2.323 1.96.652.453 1.152.355 1.152.355l2.316-.033s1.21-.075.638-1.036c-.048-.08-.336-.713-1.724-2.015-1.452-1.362-1.255-1.142.493-3.497 1.065-1.436 1.49-2.312 1.357-2.686-.128-.36-.91-.266-.91-.266l-2.609.018c-.254 0-.47.08-.567.344-.002.002-.414 1.11-.964 2.053-1.16 1.993-1.624 2.099-1.816 1.974-.441-.289-.33-1.158-.33-1.776 0-1.932.288-2.737-.564-2.946C9.27.055 9.062.01 8.336.004c-.928-.015-1.716 0-2.163.218-.297.15-.524.475-.386.494.173.023.562.107.77.39.268.369.26 1.194.26 1.194s.152 2.274-.36 2.556c-.352.193-.834-.201-1.87-2.011C4.06 1.919 3.66.897 3.66.897s-.077-.19-.217-.294c-.167-.124-.4-.163-.4-.163L.565.456S.193.466.057.63c-.122.145-.01.445-.01.445s1.94 4.588 4.136 6.9c2.014 2.121 4.302 1.98 4.302 1.98h1.037s.313-.036.473-.208c.149-.16.142-.46.142-.46s-.02-1.407.624-1.613Z"
+                      fill="#fff" />
+                  </svg>
+                </a>
+              </li>
+              <li class="social-item">
+                <a class="social-link social-link-vsco" href="#" target="_blank">
+                  <span class="visually-hidden">Мы в VSCO.</span>
+                  <svg class="social-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11.322.739c-.049 0-.098.009-.145.025-.807.012-1.6.098-2.352.286-.326.08-.648.18-.968.297a.476.476 0 0 0-.214.079c-.409.15-.806.323-1.183.522-.619.322-1.198.72-1.74 1.165a.476.476 0 0 0-.187.136c-.051.043-.102.085-.151.13a10.617 10.617 0 0 0-1.675 1.889 9.445 9.445 0 0 0-.398.632.476.476 0 0 0-.105.197c-.55.973-.946 2.045-1.155 3.178a.476.476 0 0 0-.047.214c-.028.155-.054.31-.072.476a10.526 10.526 0 0 0 .072 2.983.476.476 0 0 0 .047.214c.209 1.132.604 2.204 1.153 3.177.02.074.056.142.107.199.126.214.256.428.398.633a10.79 10.79 0 0 0 1.673 1.887c.05.045.1.087.15.129h.002c.05.062.115.11.189.14.542.442 1.121.841 1.74 1.162.376.2.773.373 1.182.523.064.043.137.07.213.08.32.116.643.216.969.296a10.35 10.35 0 0 0 2.352.286.477.477 0 0 0 .305 0 10.35 10.35 0 0 0 2.353-.286c.326-.08.648-.18.968-.297a.477.477 0 0 0 .214-.079c.409-.15.806-.323 1.182-.523.62-.32 1.199-.72 1.741-1.164a.476.476 0 0 0 .187-.136c.051-.043.103-.085.152-.131a10.794 10.794 0 0 0 1.673-1.887v-.001a9.4 9.4 0 0 0 .398-.632.475.475 0 0 0 .105-.198 10.24 10.24 0 0 0 1.156-3.177.476.476 0 0 0 .047-.215c.027-.154.054-.31.071-.475a10.533 10.533 0 0 0-.071-2.984.476.476 0 0 0-.047-.213 10.24 10.24 0 0 0-1.154-3.177.477.477 0 0 0-.107-.199 9.415 9.415 0 0 0-.398-.632v-.001a10.621 10.621 0 0 0-1.674-1.888c-.049-.044-.1-.086-.15-.128a.476.476 0 0 0-.189-.14 10.16 10.16 0 0 0-1.74-1.163 9.464 9.464 0 0 0-1.182-.522.477.477 0 0 0-.213-.08 9.048 9.048 0 0 0-.97-.296 10.352 10.352 0 0 0-2.352-.286.476.476 0 0 0-.16-.025Zm-3.567.638c-.004 0-.006.003-.01.004l-.004.001.014-.005Zm7.15 0 .014.005h-.005l-.009-.005Zm-4.051.378v1.903c-.457.03-.915.057-1.346.162-.11.027-.218.068-.327.1l-.65-1.787c.172-.053.34-.114.522-.159h.002c.572-.143 1.185-.188 1.799-.219Zm.952 0c.614.031 1.226.076 1.798.219h.003c.182.045.35.106.523.16l-.651 1.786c-.11-.032-.217-.073-.327-.1-.432-.105-.89-.133-1.346-.162V1.755Zm-4.168.71.65 1.788c-.166.073-.336.135-.498.223h-.001c-.255.135-.483.323-.724.486a.476.476 0 0 0-.26.122L5.606 3.657c.415-.314.835-.627 1.296-.866a.322.322 0 0 0 .004-.002c.238-.126.486-.22.731-.324Zm7.383 0c.246.104.494.198.732.324l.004.002c.46.239.88.552 1.296.866l-1.198 1.427a.476.476 0 0 0-.26-.121c-.241-.163-.469-.352-.724-.486-.162-.088-.333-.15-.5-.224l.65-1.788ZM4.867 4.257l1.229 1.464c-.377.36-.74.738-1.038 1.171-.026.038-.046.078-.072.116l-1.65-.953c.052-.08.1-.166.153-.244a9.641 9.641 0 0 1 1.378-1.554Zm12.925 0c.506.471.98.98 1.378 1.553v.001c.054.078.102.163.154.244l-1.65.953c-.026-.038-.046-.078-.072-.116l-.002-.001c-.299-.433-.66-.811-1.036-1.17l1.228-1.464Zm-6.938.354v1.871a4.721 4.721 0 0 0-1.92.63L7.829 5.59c.139-.086.26-.195.405-.272a5.847 5.847 0 0 1 1.5-.574v.001c.36-.087.742-.107 1.12-.134Zm.952 0c.38.027.761.047 1.12.134.22.054.427.116.627.19.034.018.07.032.106.041.263.098.522.209.763.34l.004.002c.146.077.267.186.406.272l-1.107 1.522a4.721 4.721 0 0 0-1.92-.63V4.611ZM7.04 6.126l1.125 1.547a4.783 4.783 0 0 0-1.192 1.631l-1.808-.59c.107-.27.225-.534.369-.781a.476.476 0 0 0 .055-.098c.08-.138.162-.272.251-.4v-.001a6.732 6.732 0 0 1 1.07-1.207l.067-.058.002-.001a.475.475 0 0 0 .061-.042Zm8.577 0a.477.477 0 0 0 .06.04l.07.06.002.002c.4.356.762.762 1.068 1.206v.001c.09.128.171.262.252.401a.475.475 0 0 0 .056.1c.143.245.26.508.37.778l-1.81.59a4.784 4.784 0 0 0-1.192-1.63l1.124-1.548ZM2.88 6.89l1.65.952c-.11.222-.231.439-.317.671v.001c-.025.064-.034.135-.057.2a.476.476 0 0 0-.097.351 6.96 6.96 0 0 0-.104.368l-1.878-.331a9.273 9.273 0 0 1 .803-2.212Zm16.901 0c.358.693.628 1.434.804 2.212l-1.877.33a7 7 0 0 0-.104-.375.476.476 0 0 0-.093-.336c-.024-.067-.031-.141-.058-.208-.088-.231-.21-.45-.32-.672l1.648-.951Zm-8.506.523a.476.476 0 0 0 .115 0 3.796 3.796 0 0 1 2.087.657c.047.056.107.1.174.13a3.798 3.798 0 0 1 1.264 1.74c.007.075.03.148.071.212.098.339.154.696.154 1.067 0 .37-.056.726-.154 1.065a.476.476 0 0 0-.07.214 3.798 3.798 0 0 1-1.263 1.738.476.476 0 0 0-.176.132 3.796 3.796 0 0 1-2.09.657.473.473 0 0 0-.116 0 3.796 3.796 0 0 1-3.525-2.527.476.476 0 0 0-.07-.212 3.823 3.823 0 0 1-.154-1.067c0-.37.056-.727.154-1.065a.476.476 0 0 0 .07-.215 3.796 3.796 0 0 1 3.529-2.526Zm6.503 2.21c.033.131.084.254.108.389a.48.48 0 0 0 .02.109c.015.1.03.197.04.289v.004c.032.264.05.535.05.805s-.018.541-.05.805v.004c-.01.092-.024.19-.04.29a.48.48 0 0 0-.02.107c-.024.135-.075.258-.108.39l-1.797-.585c.07-.327.11-.664.11-1.011 0-.347-.04-.685-.11-1.01l1.797-.586Zm-12.893.001 1.796.584c-.071.326-.111.664-.111 1.01 0 .348.04.685.11 1.012l-1.795.584c-.033-.131-.086-.255-.11-.39a.475.475 0 0 0-.02-.107c-.015-.1-.03-.197-.04-.29v-.003a6.872 6.872 0 0 1-.05-.805c0-.27.019-.541.05-.805v-.004c.01-.093.025-.19.04-.291a.475.475 0 0 0 .02-.105c.024-.134.077-.259.11-.39Zm-3.002.41 1.883.332a7.74 7.74 0 0 0-.052.853c0 .29.02.574.052.853l-1.883.332-.005-.03v-.008a9.561 9.561 0 0 1 0-2.302l.005-.03Zm18.896 0 .005.03v.008a9.56 9.56 0 0 1 0 2.294v.008l-.005.03-1.883-.332c.03-.279.052-.564.052-.853 0-.29-.021-.574-.052-.853l1.883-.332ZM3.954 13.005c.03.125.066.247.104.368a.476.476 0 0 0 .097.35c.023.066.032.137.057.2v.002c.086.232.208.45.318.671l-1.65.952a9.275 9.275 0 0 1-.804-2.212l1.878-.33Zm14.753 0 1.877.331a9.268 9.268 0 0 1-.804 2.212l-1.648-.95c.11-.223.232-.442.32-.673.027-.067.034-.142.058-.21a.477.477 0 0 0 .093-.336c.037-.124.074-.248.104-.374Zm-11.733.128c.277.627.687 1.18 1.192 1.631L7.04 16.312a.476.476 0 0 0-.06-.04l-.07-.06-.002-.003a6.73 6.73 0 0 1-1.067-1.205l-.001-.002a5.797 5.797 0 0 1-.251-.4.475.475 0 0 0-.056-.1 5.744 5.744 0 0 1-.368-.779l1.808-.59Zm8.711 0 1.812.59a6.14 6.14 0 0 1-.372.781.475.475 0 0 0-.055.099c-.08.138-.163.272-.251.4l-.001.001c-.306.444-.667.85-1.068 1.205 0 .001 0 .002-.002.002-.029.027-.046.04-.066.058h-.002a.484.484 0 0 0-.062.043l-1.124-1.548a4.784 4.784 0 0 0 1.191-1.63Zm-6.75 2.193c.575.337 1.224.56 1.919.63v1.871c-.38-.027-.762-.047-1.12-.135v.001a5.856 5.856 0 0 1-.627-.19.48.48 0 0 0-.106-.041 6.038 6.038 0 0 1-.763-.34l-.005-.002c-.145-.077-.266-.186-.405-.272l1.107-1.522Zm4.79 0 1.107 1.522c-.14.086-.26.195-.406.272l-.004.002a6.035 6.035 0 0 1-.766.34.473.473 0 0 0-.104.04c-.2.074-.406.137-.627.191h.001c-.359.087-.74.107-1.12.134v-1.871a4.722 4.722 0 0 0 1.92-.63Zm-8.739.104c.026.039.047.079.074.117.298.432.66.811 1.036 1.17l-1.229 1.464c-.507-.475-.981-.98-1.378-1.553v-.001c-.054-.078-.101-.163-.153-.244l1.65-.953Zm12.687 0 1.65.953c-.051.08-.099.166-.153.244-.396.573-.87 1.079-1.378 1.554l-1.228-1.464c.376-.359.737-.737 1.036-1.17l.002-.002c.026-.037.046-.077.071-.115ZM6.804 17.354a.476.476 0 0 0 .26.122c.242.163.47.35.725.485v.001c.163.088.333.15.5.222l-.65 1.788c-.246-.103-.494-.197-.732-.323l-.004-.002c-.461-.24-.88-.552-1.296-.867l1.197-1.426Zm9.051.001 1.198 1.425c-.416.315-.835.628-1.296.867l-.004.002c-.238.126-.486.22-.732.323l-.65-1.788c.167-.072.337-.134.499-.222.256-.135.484-.323.725-.486a.476.476 0 0 0 .26-.121Zm-6.674 1.163c.109.032.216.073.326.1h.001c.431.105.89.133 1.346.162v1.903c-.614-.031-1.227-.076-1.799-.219h-.002c-.183-.045-.35-.106-.523-.16l.651-1.786Zm4.298 0 .65 1.786c-.173.054-.34.115-.522.16h-.003c-.572.143-1.184.188-1.798.219v-1.904c.457-.028.914-.056 1.345-.161h.001c.11-.027.218-.068.327-.1ZM7.74 21.056h.004l.01.005-.014-.005Zm7.178 0-.014.005c.003 0 .006-.003.01-.004l.004-.001Z"
+                      fill="#FEFAFA" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-second-column">
+            <span class="feedback">Обратная связь: <br>
+              <a class="feedback-link" href="mailto:mail@htmlacademy.ru" target="_blank">mail@htmlacademy.ru</a>
+            </span>
+            <form class="footer-form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="footer-label">
+                <span class="footer-label-text">Получайте лучшие предложения</span>
+                <input class="footer-input" type="email" placeholder="email@example.com" required>
+                <span class="invalid-text invalid-text-footer">Email должен содержать символ @!</span>
+              </label>
+              <button class="footer-cart-button" type="submit">
+                <span class="visually-hidden">Подписаться на рассылку.</span>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-second-floor">
+          <span class="copyright">© 2010–2019 <a class="copyright-link" href="#" target="_blank">Компания</a>
+            «Техномарт» Все права
+            защищены</span>
+          <span class="made-by">Разработано — <a class="made-by-link" href="https://htmlacademy.ru/intensive/htmlcss"
+              target="_blank">htmlacademy.ru</a></span>
+        </div>
+      </footer>
+    </div>
+  </body>
+
+</html>
